@@ -1,0 +1,217 @@
+{
+	"info": {
+		"_postman_id": "ad1cd333-2db5-4104-9d60-d1ead9f7820e",
+		"name": "jubelio-BE-hapi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IlN5aWhhbSIsImVtYWlsIjoiaWhhbW11c29mZmFAZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMTAkbS5UUEhzODhQc0tldWZrV3hOVXVtdXhOaGlDL3BVZUREd3FOMXQ2dXN1ZDMuUDczTzN1NlMiLCJjcmVhdGVkQXQiOiIyMDIxLTEyLTI2VDEwOjM5OjU4LjA2NloiLCJ1cGRhdGVkQXQiOiIyMDIxLTEyLTI2VDEwOjM5OjU4LjA2NloiLCJpYXQiOjE2NDA1Mjc3MDcsImV4cCI6MTY0MDUyOTE0N30.QAQhyMCHASiKwTIb4zO-OYSRv9x9ewDcPMJ0zaWgKek",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:3030/api/v1/products?page=1&limit=10",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3030",
+					"path": [
+						"api",
+						"v1",
+						"products"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IlN5aWhhbSIsImVtYWlsIjoiaWhhbW11c29mZmFAZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMTAkbS5UUEhzODhQc0tldWZrV3hOVXVtdXhOaGlDL3BVZUREd3FOMXQ2dXN1ZDMuUDczTzN1NlMiLCJjcmVhdGVkQXQiOiIyMDIxLTEyLTI2VDEwOjM5OjU4LjA2NloiLCJ1cGRhdGVkQXQiOiIyMDIxLTEyLTI2VDEwOjM5OjU4LjA2NloiLCJpYXQiOjE2NDA1Mjc3MDcsImV4cCI6MTY0MDUyOTE0N30.QAQhyMCHASiKwTIb4zO-OYSRv9x9ewDcPMJ0zaWgKek",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"testestestestestestestes\",\n    \"stock\":12,\n    \"imageUrl\":\"http://upload\",\n    \"description\":\"testestestestestestestestestes\",\n    \"price\":2000,\n    \"id\":129325971\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3030/api/v1/products",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3030",
+					"path": [
+						"api",
+						"v1",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IlN5aWhhbSIsImVtYWlsIjoiaWhhbW11c29mZmFAZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMTAkbS5UUEhzODhQc0tldWZrV3hOVXVtdXhOaGlDL3BVZUREd3FOMXQ2dXN1ZDMuUDczTzN1NlMiLCJjcmVhdGVkQXQiOiIyMDIxLTEyLTI2VDEwOjM5OjU4LjA2NloiLCJ1cGRhdGVkQXQiOiIyMDIxLTEyLTI2VDEwOjM5OjU4LjA2NloiLCJpYXQiOjE2NDA1Mjc3MDcsImV4cCI6MTY0MDUyOTE0N30.QAQhyMCHASiKwTIb4zO-OYSRv9x9ewDcPMJ0zaWgKek",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"new update\",\n    \"stock\":12,\n    \"imageUrl\":\"http://upload\",\n    \"description\":\"testestestestestestestestestes\",\n    \"price\":2000,\n    \"id\":129325971\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3030/api/v1/products/129325971",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3030",
+					"path": [
+						"api",
+						"v1",
+						"products",
+						"129325971"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3030/api/v1/products/129325971",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3030",
+					"path": [
+						"api",
+						"v1",
+						"products",
+						"129325971"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get by id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IlN5aWhhbSIsImVtYWlsIjoiaWhhbW11c29mZmFAZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMTAkbS5UUEhzODhQc0tldWZrV3hOVXVtdXhOaGlDL3BVZUREd3FOMXQ2dXN1ZDMuUDczTzN1NlMiLCJjcmVhdGVkQXQiOiIyMDIxLTEyLTI2VDEwOjM5OjU4LjA2NloiLCJ1cGRhdGVkQXQiOiIyMDIxLTEyLTI2VDEwOjM5OjU4LjA2NloiLCJpYXQiOjE2NDA1Mjc3MDcsImV4cCI6MTY0MDUyOTE0N30.QAQhyMCHASiKwTIb4zO-OYSRv9x9ewDcPMJ0zaWgKek",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:3030/api/v1/products/25130902",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3030",
+					"path": [
+						"api",
+						"v1",
+						"products",
+						"25130902"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"ihammusoffa@gmail.com\",\n    \"password\":\"123123\"\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3030/api/v1/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3030",
+					"path": [
+						"api",
+						"v1",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

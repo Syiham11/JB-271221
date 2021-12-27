@@ -1,0 +1,44 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "seed:dev": "sequelize-cli db:seed:all",
+    "seed:undo": "sequelize-cli db:seed:undo:all",
+    "migrate": "sequelize-cli db:migrate",
+    "migrate:undo": "sequelize-cli db:migrate:undo",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode production"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/hapi": "^20.2.1",
+    "axios": "^0.19.2",
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.1",
+    "dotenv": "^8.2.0",
+    "fs": "0.0.1-security",
+    "hapi-bodyparser": "^2.1.2",
+    "hapi-cors": "^1.0.3",
+    "jsonwebtoken": "^8.5.1",
+    "path": "^0.12.7",
+    "pg": "^8.1.0",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^5.21.7",
+    "sequelize-cli": "^5.5.1",
+    "xml2json": "^0.12.0"
+  },
+  "devDependencies": {
+    "html-webpack-plugin": "^4.3.0",
+    "json-loader": "^0.5.7",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-middleware": "^3.7.2",
+    "webpack-hot-middleware": "^2.25.0",
+    "webpack-node-externals": "^2.5.1"
+  }
+}

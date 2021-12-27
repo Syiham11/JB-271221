@@ -1,0 +1,33 @@
+{
+  "development": {
+    "username": "docker",
+    "password": "docker",
+    "database": "jubelio",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "operatorsAliases": "0",
+    "port": 5432,
+    "eleveniaApiKey": "721407f393e84a28593374cc2b347a98",
+    "eleveniaApi": "http://api.elevenia.co.id/rest"
+  },
+  "test": {
+    "username": "docker",
+    "password": "docker",
+    "database": "jubelio",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "operatorsAliases": false,
+    "eleveniaApiKey": "721407f393e84a28593374cc2b347a98",
+    "eleveniaApi": "http://api.elevenia.co.id/rest"
+  },
+  "production": {
+    "username": "docker",
+    "password": "docker",
+    "database": "jubelio",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "operatorsAliases": false,
+    "eleveniaApiKey": "721407f393e84a28593374cc2b347a98",
+    "eleveniaApi": "http://api.elevenia.co.id/rest"
+  }
+}
