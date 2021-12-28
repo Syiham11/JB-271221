@@ -1,18 +1,14 @@
-const Models = require("../models");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 process.env.SECRET_KEY = "secret";
+const pool = require("../config/db")
+
 const UsersService = {
   async login(data) {
-    let user = await Models.Users.findOne({
-      where: {
-        email: data.email,
-      },
-    });
-
-    if (user) {
-      if (bcrypt.compareSync(data.password, user.password)) {
-        let result = jwt.sign(user.dataValues, process.env.SECRET_KEY, {
+  const { rows } = await pool.query('SELECT * FROM "Users" WHERE email = $1', [data.email])
+    if (rows.length !== 0) {
+      if (bcrypt.compareSync(data.password, rows[0]['password'])) {
+        let result = jwt.sign(rows[0], process.env.SECRET_KEY, {
           expiresIn: 1440,
         });
         return  {
